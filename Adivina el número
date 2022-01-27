@@ -1,0 +1,26 @@
+- import random
+
+def adivina_el_juego(x):
+    
+    print("""""""""""""""""")
+    print("bienvenido al juego")
+    print("""""""""""""""""")
+    print("el juego consiste en que adivines cual es el numero generado por la computadora")
+    
+    #iniciamos  con que el a computadora escoja un numero al azar.
+    
+    numero_aleatorio = random.randint(1, x) #numero alazar entre 1 y x.
+    
+    adivina = 0
+    
+    while adivina != numero_aleatorio:
+        adivina = int(input(f"adivina un numero entre el 1 y {x}:_"))
+        
+        if adivina < numero_aleatorio:
+            print ("intenta otra vez. este numero es menor ")
+        elif adivina > numero_aleatorio:
+            print ("intenta otra vez. este numero es mayor ")  
+        
+    print("felicidades acertaste el numero")    
+               
+adivina_el_juego(5)     
